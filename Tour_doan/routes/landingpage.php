@@ -125,3 +125,12 @@ Route::middleware(['auth', 'verified'])->group(
     }
 );
 Route::get('index', LandingPageController::class);
+Route::get('tintuc', [LandingPageController::class,'tintuc']);
+Route::get(
+    'new/{slug}',
+    [LandingPageController::class, 'chitiet_tintuc']
+)->name('new.detail');
+Route::get(
+    'post/{slug}',
+    [LandingPageController::class, 'post_detail']
+)->name('post.detail');

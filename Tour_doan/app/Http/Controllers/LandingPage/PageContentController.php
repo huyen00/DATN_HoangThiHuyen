@@ -122,10 +122,10 @@ class PageContentController extends InertiaController
                     ]);
                 }
             }
-
+            $sub_code = $content->id.Str::random(10);
             $this->CreateLanguage($content->title, $request->title_en, $request->title_vn, $content);
             $this->CreateLanguage($content->description, $request->description_en, $request->description_vn, $content);
-            $this->CreateLanguage($content->sub_title, $request->subtitle_en, $request->subtitle_vn, $content);
+            $this->CreateLanguage($content->sub_title, Str::slug($request->title_en).'-'.$sub_code, Str::slug($request->title_vn).'-'.$sub_code, $content);
             return redirect('/admin/pages/section/' . $section->title . '/content')->with('success', 'Create successfully');
         } else {
             return $this->errors()->errors_403();
@@ -146,8 +146,8 @@ class PageContentController extends InertiaController
             $this->validate(
                 $request,
                 [
-                    'title_en' => 'required|unique:languages,en,' . $language_title->id,
-                    'title_vn' => 'required|unique:languages,vn,' . $language_title->id,
+                    'title_en' => 'required',
+                    'title_vn' => 'required',
                     'subtitle_en' => 'nullable',
                     'subtitle_vn' => 'nullable',
                     'description_en' => 'nullable',
@@ -168,9 +168,9 @@ class PageContentController extends InertiaController
             $content->video = $request->video;
             $content->image = $request->hasFile('icon') ? $this->update_image($request->file('icon'), $name, $destinationpath, $content->image) : $content->image;
             $content->save();
-
+            $sub_code = $content->id.Str::random(10);
             $this->updateLanguage($content->title, $request->title_en, $request->title_vn, $content);
-            $this->updateLanguage($content->sub_title, $request->subtitle_en, $request->subtitle_vn, $content);
+            $this->CreateLanguage($content->sub_title, Str::slug($request->title_en).'-'.$sub_code, Str::slug($request->title_vn).'-'.$sub_code, $content);
 
             $this->updateLanguage($content->description, $request->description_en, $request->description_vn, $content);
             return redirect('/admin/pages/section/' . $content->page_contentable->title . '/content')->with('success', 'Update successfully');

@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="locale" content="{{ App::getLocale() }}" />
     <base href="{{ asset('') }}">
-    <link rel="icon" href="/static/img/favicon.png">
+    <link rel="icon" href="/static/img/logodh.png">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
 
     {{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> --}}

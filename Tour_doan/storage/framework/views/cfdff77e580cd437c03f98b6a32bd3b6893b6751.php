@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
     <meta name="locale" content="<?php echo e(App::getLocale()); ?>" />
     <base href="<?php echo e(asset('')); ?>">
-    <link rel="icon" href="/static/img/favicon.png">
+    <link rel="icon" href="/static/img/logodh.png">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
 
     

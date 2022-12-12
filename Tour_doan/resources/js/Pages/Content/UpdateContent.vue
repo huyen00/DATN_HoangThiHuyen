@@ -122,40 +122,6 @@
                 <div class="text-red-500" v-if="errors.title_vn">{{ errors.title_vn }}</div>
               </div>
 
-              <div class="col-span-6 sm:col-span-3" v-if="showSub">
-                <label
-                  for="email_address"
-                  class="block text-sm font-medium text-gray-700"
-                >{{__('sub_title')}} {{__('en')}}</label>
-                <input
-                  v-model="form.subtitle_en"
-                  type="text"
-                  name="email_address"
-                  id="email_address"
-                  autocomplete="email"
-                  placeholder="Title English"
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                />
-                <div class="text-red-500" v-if="errors.subtitle_en">{{ errors.subtitle_en }}</div>
-              </div>
-
-              <div class="col-span-6 sm:col-span-3" v-if="showSub">
-                <label
-                  for="country"
-                  class="block text-sm font-medium text-gray-700"
-                >{{__('sub_title')}} {{__('vn')}}</label>
-                <input
-                  v-model="form.subtitle_vn"
-                  type="text"
-                  name="email_address"
-                  id="email_address"
-                  placeholder="Title VietNamese"
-                  autocomplete="email"
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                />
-                <div class="text-red-500" v-if="errors.subtitle_vn">{{ errors.subtitle_vn }}</div>
-              </div>
-
               <div class="col-span-6 sm:col-span-3" v-if="showDes">
                 <label
                   for="description_en"
@@ -326,9 +292,6 @@ export default {
         title: null,
         title_en: null,
         title_vn: null,
-        subtitle_en: null,
-        subtitle_vn: null,
-        sub_title: null,
         description: null,
         description_en: null,
         description_vn: null,
@@ -364,7 +327,7 @@ export default {
   mounted() {
     this.form.id = this.content.id;
     this.form.title = this.content.title;
-    this.form.sub_title = this.content.sub_title;
+
     this.form.description = this.content.description;
     const result = this.content.languages.find(
       element => element.key == this.form.title
@@ -372,11 +335,6 @@ export default {
     this.form.title_en = result == undefined ? null : result.en;
     this.form.title_vn = result == undefined ? null : result.vn;
 
-    const result2 = this.content.languages.find(
-      element => element.key == this.form.sub_title
-    );
-    this.form.subtitle_en = result2 == undefined ? null : result2.en;
-    this.form.subtitle_vn = result2 == undefined ? null : result2.vn;
     const result3 = this.content.languages.find(
       element => element.key == this.content.description
     );
@@ -403,7 +361,7 @@ export default {
     reset: function() {
       this.form.id = this.content.id;
       this.form.title = this.content.title;
-      this.form.sub_title = this.content.sub_title;
+
       this.form.description = this.content.description;
       const result = this.content.languages.find(
         element => element.key == this.form.title
@@ -411,11 +369,6 @@ export default {
       this.form.title_en = result == undefined ? null : result.en;
       this.form.title_vn = result == undefined ? null : result.vn;
 
-      const result2 = this.content.languages.find(
-        element => element.key == this.form.sub_title
-      );
-      this.form.subtitle_en = result2 == undefined ? null : result2.en;
-      this.form.subtitle_vn = result2 == undefined ? null : result2.vn;
       const result3 = this.content.languages.find(
         element => element.key == this.content.description
       );

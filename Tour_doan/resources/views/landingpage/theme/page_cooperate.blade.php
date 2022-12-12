@@ -19,7 +19,7 @@
                                 <div class="text_cooperate">
                                     <span class="text_page">
                                         {!!Str::words(strip_tags(__($content->description)), 70, '...')!!}
-                                        <a href="">(xem tiếp)</a>
+                                        <a href="{{route('post.detail',__($content->sub_title))}}">(xem tiếp)</a>
                                     </span>
                                 </div>
                             </div>

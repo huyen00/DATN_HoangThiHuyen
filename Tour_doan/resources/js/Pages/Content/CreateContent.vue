@@ -119,39 +119,7 @@
                 <div class="text-red-500" v-if="errors.title_vn">{{ errors.title_vn }}</div>
               </div>
 
-              <div class="col-span-6 sm:col-span-3" v-if="showSub">
-                <label
-                  for="email_address"
-                  class="block text-2xl font-medium text-gray-700"
-                >{{__('sub_title')}} {{__('en')}}</label>
-                <input
-                  v-model="form.subtitle_en"
-                  type="text"
-                  name="email_address"
-                  id="email_address"
-                  autocomplete="email"
-                  placeholder="Title English"
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-2xl border-gray-300 rounded-md"
-                />
-                <div class="text-red-500" v-if="errors.subtitle_en">{{ errors.subtitle_en }}</div>
-              </div>
-
-              <div class="col-span-6 sm:col-span-3" v-if="showSub">
-                <label
-                  for="country"
-                  class="block text-2xl font-medium text-gray-700"
-                >{{__('sub_title')}} {{__('vn')}}</label>
-                <input
-                  v-model="form.subtitle_vn"
-                  type="text"
-                  name="email_address"
-                  id="email_address"
-                  placeholder="Title VietNamese"
-                  autocomplete="email"
-                  class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-2xl border-gray-300 rounded-md"
-                />
-                <div class="text-red-500" v-if="errors.subtitle_vn">{{ errors.subtitle_vn }}</div>
-              </div>
+          
               <div class="col-span-6 sm:col-span-3" v-if="showDes">
                 <label
                   for="street_address"
@@ -322,9 +290,6 @@ export default {
         title: null,
         title_en: null,
         title_vn: null,
-        subtitle: null,
-        subtitle_en: null,
-        subtitle_vn: null,
         description: null,
         description_en: null,
         description_vn: null,
@@ -401,9 +366,6 @@ export default {
         images: null,
         icon: null,
         link: null,
-        subtitle: null,
-        subtitle_en: null,
-        subtitle_vn: null
         // audio360: null
       });
     },
