@@ -1,0 +1,73 @@
+
+
+@media all and (min-width:1025px){
+   
+
+}
+@media all and (max-width:2000px){
+   
+}
+@media all and (max-width:1600px){
+    
+}
+@media all and (max-width:1300px){
+   
+}
+
+@media all and (max-width:1024px){
+  
+
+}
+
+
+@media all and (max-width: 800px){
+  
+
+}
+
+@media all and (max-width:600px){
+  
+
+}
+
+@media all and (max-width:480px){
+   
+}
+
+@media all and (max-width:320px){
+/* info  */
+.info, .map, .image{
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+}
+.content_info {
+    height: 65%;
+}
+.footer_icon{
+    padding: 0.2rem 0.5rem;
+}
+/* image */
+
+.item_image{
+    width: 50%;
+    height: 120px;
+    margin-top:1rem;
+}
+.title_image span{
+    font-size: 11px;
+}
+/* map */
+
+/* contact */
+.contact{
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -150px;
+}
+
+}

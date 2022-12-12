@@ -1,0 +1,320 @@
+
+
+
+/* page carousel  */
+.owl-stage, .owl-item{
+    width: 100% !important;
+}
+.item{
+    position: relative;
+}
+.item img{
+    position: relative;
+}
+.image_banner{
+    width: 100%;
+}
+.content_carousel{
+    width: 400px;
+    height: 300px;
+    background: rgb(20, 20, 179);
+    top: 50%;
+    left: 50%;
+    margin:-150px 0 0 -700px;
+    position: absolute;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 22%);
+}
+.text_item_carousel{
+    padding:2rem;
+}
+.text_item{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
+}
+.btn_xemthem{
+    text-align: left;
+    margin-top:2rem;
+    bottom:0;
+}
+.btn_link_xemthem{
+    padding:0.5rem 1rem;
+    border:0;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+.btn_link_xemthem:hover{
+    background-color: rgb(179, 165, 165);
+    border: 1px solid #fff;
+    text-decoration: none;
+}
+
+/* page news */
+.content_news{
+    padding:2rem;
+    padding-bottom: 0px;
+}
+
+.list_news{
+    margin-top:2rem;
+    display: flex;
+}
+.item_news{
+    width: 25% !important;
+    padding:0rem 1rem;
+}
+.content_item_news{
+    margin-top:1rem;
+}
+.image_news{
+    position: relative;
+}
+.blog{
+    position: absolute;
+    bottom:0;
+    background-color: red;
+
+}
+.blog span{
+    padding:1rem;
+    color:#fff;
+    text-transform: capitalize;
+}
+
+
+.see_more{
+    margin-top: 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    background: rgb(20, 20, 179);
+}
+.linh_see_more{
+    color:#fff;
+    text-transform: capitalize;
+
+}
+
+/* page event */
+.image_event{
+    position: relative;
+    height: 400px;
+}
+.content_image_event{
+    background-color: rgba(0, 0, 0, 0.336);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    padding:2rem;
+}
+.img_item_event{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+.list_event{
+   
+    height: 100%;
+    display: flex;
+    margin-top:2rem;
+    position: relative;
+}
+.item_event{
+    width: 25%;
+    height: 80%;
+    margin:0rem 1rem;
+    background-color: #D9D9D9;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.item_image_event{
+    height: 50% !important;
+    width: 100%;
+    object-fit: cover;
+}
+.content_item_event{
+    padding:1.5rem;
+}
+
+/* page admissions */
+.page_Admissions{
+    padding:3rem 0rem;
+}
+.title_admissions{
+    justify-content: center;
+    padding: 0 15px 30px;
+}
+.text_admissions{
+    margin: auto;
+    text-align: center;
+    padding: 0rem 2rem;
+}
+.col_edu_admissions{
+    width: 50%;
+    padding:0rem 1rem;
+}
+.image_education{
+    width: 50%;
+}
+.title_education{
+    text-transform: uppercase;
+}
+.content_education{
+    width: 50%;
+}
+.content_col_edu{
+    padding:1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.image_education img{
+    height: 100%;
+    object-fit: cover;
+}
+.content_education{
+    padding:0rem 1rem;
+}
+
+
+/* page coope */
+.content_cooperate{
+    position: relative;
+    height: 500px;
+}
+.img_cooperate{
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+
+}
+.img_item_cooperate{
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+}
+.content_image_cooperate{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.336);
+    padding:2rem 0rem;
+}
+.text_cooperate{
+  
+    
+}
+.list_cooperate{
+    display: flex;
+    padding:2rem 0rem 
+}
+.item_cooperate{
+    width: 50%;
+    margin:0rem 1rem;
+    display: flex;
+    padding:0.7rem;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+.image_cooperate{
+    width: 50%;
+}
+.content_cooperate_item{
+    width: 50%;
+    padding-left:1rem;
+}
+.title_cooperate{
+    text-transform: uppercase;
+}
+
+/* page cựu sinh viên  */
+.content_alumni{
+    padding:2rem 0rem;
+}
+.list_alumni{
+    padding:2rem 0rem;
+    display: flex;
+}
+.item_alumni{
+   
+    margin:0rem 1rem;
+    background-color: #e7dede3f;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.content_item_alumni{
+    position: relative;
+    
+}
+.content_text_alumni{
+    padding:1rem;
+}
+.blog_alumni{
+    position: absolute;
+    bottom:0;
+    left:0;
+    background-color: red;
+}
+.blog_alumni span{
+    padding:1rem;
+    color:#fff;
+    text-transform: capitalize;
+}
+
+.multiple-items{
+    display: flex;
+    width: 100%;
+}
+.link_alumni{
+    color:#000;
+}
+.link_alumni:hover{
+    text-decoration: none;
+    
+}
+.icon_slick{
+    position: absolute;
+  font-size: 20px;
+    top: 45%;
+    color:#fff;
+}
+.icon_next{
+    right: -10px;
+    background-color: rgb(20, 20, 179);
+   
+}
+.icon_prev{
+    left:-10px;
+    background-color: rgb(20, 20, 179);
+}
+/* virtual tour */
+.page_tour{
+    height: 100vh;
+    width: 100%;
+    margin-top:2rem;
+
+}
+.tour360{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.tour360 img{
+    height: 100%;
+    width: 100%;
+}
+.image_tour{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+}
+.image_tour a{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}

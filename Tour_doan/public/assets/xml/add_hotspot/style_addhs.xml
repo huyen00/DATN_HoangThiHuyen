@@ -1,0 +1,336 @@
+<krpano>
+
+	<include url="%FIRSTXML%/plugins/showtext.xml" />
+
+	<!-- ///////////////////    Project settings  /////////////////////////  -->
+	<!--  	 -->
+	<addhs_settings 
+		sound_close_click="true"
+		video_close_click="true"
+		youtube_close_click="true"
+		firstxml="tour"
+		path="%FIRSTXML%/"
+		backup="false"
+		keyboard_activation_of_the_editor="true"
+	/>
+
+	<!-- ///////////////////    STYLE HOTSPOT /////////////////////////  -->
+
+	<!-- <css_slaider path="add_hotspot/plugins_l/editor/css/style.css" />	 -->
+	
+	<!-- Style hotspot --> 
+	<style name="link_hs_sm" keep="false" type="image" width="100" height="prop"  zorder="5" depth="1000"  ondown.addevent="drag_LinkSM();" title="" drag_hs="true" adhs="true"  />
+
+	<!-- text hotspot style  --> 
+    <style	name="text_hs_sm" keep="false" type="text" html="" capture="true" edge="center" adhs="true" 
+			width="" height="" alpha="1" scale="1"  zorder="6" padding="10 10 10 10"  
+			css="font-family:Arial; font-size:16px; color:#FFFFFF; text-align:center;" txtshadow="0 0 0 0х000000 0.5"  
+			bg="true" bgcolor="0x777777" bgalpha="0.5"  bgborder="1 0xFFFFFF 1" bgroundedge="0 0 0 0" bgshadow="0 0 0 0х000000 0.5"
+			vcenter="true" oversampling="2"  ondown.addevent="drag_LinkSM();"
+			install_onclick="12" drag_hs="true" title="" 
+		/>	
+	
+	<!-- Style sound . hotspot[get(name)].loadstyle(sound_hs)   assignstyle(hotspot[get(name)], 'sound_hs') -->
+	<style name="sound_hs" keep="false" onclick="click_s_hs(); if(action[stop_all_video_hs], stop_all_video_hs());" install_onclick="9" volume_adhs="0.5" loop_s="false" sound3d="false" range_sound="90" newscen_stopsoud="true" info_ah="" drag_hs="true"  zorder="5"  ondown.addevent="drag_LinkSM();"  title="" adhs="true"   />
+
+	<!-- Стиль видео хотспотов  Когда началось воспроизведение - play_vh true статус текущего воспроизведения для памяти при переходе на другую сцену 
+		 Style of video hotspots When playback started - play_vh true the status of the current playback for memory when moving to another scene --> 
+    <style	name="vid_hs_addhs" keep="false" url.html5="%FIRSTXML%/plugins/videoplayer.js" url.flash="%FIRSTXML%/plugins/videoplayer.swf" adhs="true" 
+			 capture="true" distorted="true" zorder="5" videourl="" info_ah="" loop="false" playbackrate="1" onvideoplay="set(play_vh,true);" play_vh="false"
+			newscen_stopsoud="true" vsound3d="false" range_sound="90" volume_max="0.5" drag_hs="true" title=""
+			width="300" height="prop" edge="center" alpha="1" scale="1"  handcursor="true" depth="1000" posterurl=""
+			install_onclick="11" pausedonstart="true" volume="0.5" onvideopaused=""
+			onclick="togglepause(); if(sound[sound_hs_addhs], delete_sound_hs_addhs(); );   if(ispaused, set(play_vh,true);,set(play_vh,false); );" 
+			onout=""  onover=""  onhover="" onloaded=""  ondown.addevent="drag_LinkSM()"  
+		/>
+		
+	<!-- Polygonal hotspot style -->
+	<style name="pl_hs_add_hs" keep="false" adhs="true" alpha="1" alpha2="1" capture="false" handcursor="true" zorder="0" install_onclick="14" fov_el="90" fillcolor="0x1500FF" fillcolor2="0xE80606" fillalpha="0.5" fillalpha2="0.69" borderwidth="2" borderwidth2="2" bordercolor="0xFF2B00" bordercolor2="0xFFEE00" borderalpha="1" borderalpha2="1.00" onover="set_pol_2(get(name));" onout="set_pol_1(get(name));"  ondown.addevent="ondown_pl_hs();" blendmode="normal" group="" fillcol2="E80606" bordercol2="FFEE00" polyline="false" borderzoom="0" borderhittest="false" 
+	onloaded="set_mem_pol(get(name));"/>	
+		
+	<!-- ///////////////////     STYLE HOTSPOT   /////////////////////////  -->
+	
+	
+	
+	
+	<!-- *************//////////////////////////////////////////////////////////////*********** -->
+	
+	
+	<!-- the style pop-up text when you hover your mouse over the link . Текст при наведении мыши-->
+	<textstyle name="STYLE1_LinkSM"
+	           font="Arial" fontsize.no-mobile="18" fontsize.mobile="16" bold="false" italic="false" xoffset="0" yoffset="-20"
+	           background="true" backgroundcolor="0x006868" backgroundalpha="0.9"
+	           border="false" borderwidth="0" bordercolor="0xFFFFFF" roundedge="3"
+	           textcolor="0xFFFFFF"
+	           padding="4 5"
+	           textalign="center" textshadowrange="2"   
+			   textshadow ="3"
+	           />	
+			   
+	<textstyle name="STYLE1_LinkSM2"
+	           font="Arial" fontsize.no-mobile="17" bold="false" italic="false" xoffset="0" yoffset="-20"
+	           background="true" backgroundcolor="0x006868" backgroundalpha="0.8"
+	           border="false" borderwidth="0" bordercolor="0xFFFFFF" roundedge="3"
+	           textcolor="0xFFFFFF"
+	           padding="4 5" textshadow ="3" textshadowrange="2"  
+	           textalign="center"           
+	           />
+			   
+	<!-- Стиль подписи фото -->         		   
+	<style name="tit_ph_styl_adhs" enabled="false" type="text" css="font-family:Comic Sans MS, Comic Sans, cursive, Arial; color:#FFFFFF; font-size:20px; text-align:center " 
+		    x="0" y="0"  padding="7 10" keep="true" align="top" edge="top" zorder="52" alpha="0" width="100%" 
+			background="true" backgroundcolor="0x000000" backgroundalpha="0.3" 			   
+			border="false" bordercolor="0xFFFFFF" borderalpha="0" borderwidth="0" roundedge="0"      
+			shadow="5.0"  shadowrange="3.0"  shadowangle="90"  shadowcolor="0x000000"  shadowalpha="0"
+			textshadow="0.0" textshadowrange="4.0" textshadowangle="45" textshadowcolor="0x000000" textshadowalpha="1.0"
+			wordwrap="true" 
+		  />
+			   			
+	<!-- Фон  -->
+	<style name="freim_bg_Adhs" type="container" alpha="0" keep="true" align="lefttop"  width="100%" height="100%" zorder="50" safearea="false"
+		   bgcolor="0x000000"  bgalpha="0.7" bgcapture="true" handcursor="false" onclick.addevent="" />
+		   
+	<!-- Стиль хотспота открытия фотографии в режиме VR --> 
+    <style name="StPhotADHS" type="image" keep="true" width="0" height="prop"  zorder="5" depth="1000"  alpha="1" edge="center" 
+				VRwidth="900" onout="tween(width,0,0.5,easeinquart, removehotspot(photADHS));"  />
+
+	<!-- Стиль видео в режиме VR -->
+    <style	name="StVideoADHS" url.html5="%FIRSTXML%/plugins/videoplayer.js"  capture="true"  zorder="5" edge="center"
+			width="0" VRwidth="900" height="prop"  posterurl=""
+			onout="tween(width,0,0.5,easeinquart, removehotspot(VideoADHS));"
+			pausedonstart="false" 
+		/>
+
+	
+	<!-- ////////////////////   Buttons   ////////////////////////////// -->	 	
+	
+	<!-- Close photo button. Кнопка закрыть фотографию -->	   
+	<layer name="close6_photo"  keep="true" align="righttop" x="25"  y="22" url="plugins_l/picture/close.png" zorder="51" enabled="false"
+	        width="20" height="prop" alpha="0" edge="center" visible="true" bgcapture="true" handcursor="true"
+	        onover="tween(width,25,0.2);" onout="tween(width,20,0.2);" onclick="delayedcall(0.3,close_photo_add_hs();); tween(alpha,0); set(enabled,false);"/>
+	<!-- Close youtube  закрыть youtube  -->	   
+	<layer name="close8_youtube"  keep="true" align="righttop" x="23"  y="23" url="plugins_l/picture/close.png" zorder="51" enabled="false"
+	        width="20" height="prop" alpha="0" edge="center" visible="true" bgcapture="true" handcursor="true"
+	        onover="tween(width,25,0.2);" onout="tween(width,20,0.2);" onclick="delayedcall(0.3,youtubeplayer_close();); tween(alpha,0); set(enabled,false);" />
+	<!-- Close video   Кнопка закрыть видео-->	   
+	<layer name="close7"  keep="true" align="righttop" x="23"  y="23" url="plugins_l/picture/close.png" zorder="56" enabled="false"
+	        width="20" height="prop" alpha="0" edge="center" visible="true" bgcapture="true" handcursor="true"
+	        onover="tween(width,25,0.2);" onout="tween(width,20,0.2);" onclick="delayedcall(0.3,videoplayer_close();); tween(alpha,0); set(enabled,false);" />
+	<!-- play video    Кнопка плей видео -->	   
+	<layer name="play_vid_icon"  keep="true" align="center"  url="plugins_l/picture/media_playback_start.png"
+			zorder="100" enabled="false" visible="false" scale="0.7"
+	        width="100" height="prop" alpha="0" edge="center" bgcapture="false" handcursor="false" />
+	<!-- close_freim_url   Кнопка закрыть -->	   
+	<layer name="close_freim_url_addhs"  keep="true" align="righttop" x="35"  y="23" url="plugins_l/picture/close.png" zorder="51" enabled="false"
+	        width="20" height="prop" alpha="1" edge="center" visible="false" bgcapture="true" handcursor="true" onclick="" />		
+	
+
+<!-- ////////////////////////////    SOUND      ///////////////////////////////// -->
+	<style name="sound_bar" type="container" keep="true" alpha="0" bgcolor="0x2D3E50" bgalpha="0.5" align="leftbottom" width="284" height="25" x="0" y="70" bgroundedge="3" bgshadow="4 4 6 0x000000 0.4"  visible="false" enabled="false" zorder="55" maskchildren="false" handcursor="false"   bgcapture="true" 
+	onloaded="calc(x, (stagewidth - width) / 2)" ondown="drag_pan_addhs();" />
+  
+	<!-- Палец громкости  -->
+	<layer name="volume_finger"  keep="true" url="plugins_l/picture/volume_finger.png" align="right" x="15"  y="0" scale="0.5" enabled="false" alpha="0" zorder="51" /> 	
+
+	<sound_hs
+		sound_bar="true"
+		volume_icon_right="true"
+		speaker_icon="true"
+	/>
+		
+	<!-- set(style[volume_tab_sound_st_Adhs].width,0);
+		set(layer[volume_finger].scale,0);  -->
+
+
+<!-- ///////////////////////////////////_______________PHOTO _____________////////////////////////////////////////////// -->
+	
+	<!-- открыть фотографию  -->	
+	<photSM  height="80%"
+			 width="prop" 
+			 onclick="close_photo_add_hs();"
+			 widthmin="300" 
+		/>
+		
+	<style name="pl_min_ph" type="image" url="%VIEWER%/add_hotspot/plugins_l/picture/vtourskin_light.png" keep="true" align="right"  width="35" height="prop" y="-20" crop="0|320|64|64" alpha="0.5" onover="set(alpha,1)" onout="set(alpha,0.5)" />
+	
+	<!-- Фон под фото  -->
+	<layer name="bg_Adhs_photo" style="freim_bg_Adhs" enabled="false"
+		onclick="if(addhs_settings.sound_close_click, close_photo_add_hs());"	/>
+		
+	<layer name="cont_plus_minus" style="freim_bg_Adhs" align="right" enabled="false" width="10" height="10" bgalpha="0.0" zorder="100" 	>	
+		<!-- +  -->
+		<layer name="plus_ph" style="pl_min_ph" y="-25" crop="0|320|64|64" ondown="image_scale_adhs(1)" />
+		<!-- -  -->	   
+		<layer name="minus_ph"  style="pl_min_ph" y="25"  crop="64|320|64|64" ondown="image_scale_adhs(-1)" />	
+ 	</layer>   
+	
+
+	
+	
+<!-- ////////////////////////////            youtube               ///////////////////////////////// -->
+	<youtubeplayer_settings
+		maxsize="0.80"
+		parameters="autoplay=1&amp;autohide=1&amp;controls=1&amp;loop=0&amp;modestbranding=0&amp;rel=0&amp;showinfo=0&amp;hd=1&amp;vq=hd720"
+	/>
+	<!--
+		youtubeplayer_settings
+		o maxsize
+			- set the max. size of the screen-size (0.80 = 80%, 1.0 = 100%)
+			-в зависимости от доступного пространства будет использоваться ширина экрана или высота
+
+		o parameters
+			- tПараметры встраивания на YouTube
+			- смотрите здесь для документации всех доступных параметров:
+				https://developers.google.com/youtube/player_parameters#Parameters
+			-например установить элементы управления = 0, чтобы удалить элемент управления YouTube по умолчанию
+	-->
+	
+	
+		
+	<!-- ////////////////////////////////////////            БЛОК ФРЕЙМ HTML                /////////////////////////////////////////////////////////////////////// -->
+	
+	<!-- Плагин блюр  -->
+	<!-- <plugin name="pp_blur" keep="true" url="%VIEWER%/plugins/pp_blur.js" enabled="true" range="0.0" linearrgb="false" zorder="50" order="1" phase="2" /> -->
+	
+	<!-- Фоновый слой  -->
+	<!-- <layer name="pp_blur2" type="container" keep="true" width="100%" height="100%" enabled="false" bgcapture="true" handcursor="false" zorder="5"
+			  onclick="	set(enabled, false);
+							set(events[popup].name, null);
+							tween(plugin[pp_blur].range, 0.0);
+							tween(layer[popup].alpha, 0.0, 0.25, default, removelayer(popup, true); );
+							scope(private:POPUP, delete(popup); );  " 
+		/> -->
+	<!-- Окно под инфо html  -->
+	<!-- <style name="frame_html" type="container" alpha="0" keep="true" align="center"  width="90%" height="90%" align.mobile="center" 
+			  width.mobile="100%" height.mobile="100%"
+		      padding="0"  zorder="52"  bgroundedge="2"
+			  bgborder="0 0xFFFFFF 1" bgcolor="0xe7dec7"  bgalpha="0" 
+		/> -->
+
+	<!-- Крестик закрыть HTML  -->	 
+	<!-- <style name="close_freim_url"  keep="true"  align="righttop" edge="center" width="20" width.mobile="15" height="prop"  x="35"  y="20" zorder="7"
+			  url="plugins_l/picture/close.png"  bgcapture="false" handcursor="true" parent="popup" 
+			  onover="set(scale,1.2);" onout="set(scale,1.0);" onclick="callwith(layer[pp_blur2],onclick);"
+		/> -->
+	
+
+
+
+ 
+	<!-- ///////////////////    popup   БЛОК ФРЕЙМ HTML   ///////////////////////// -->
+
+	<!-- Контейнер под HTML  -->	 
+	<style name="infospot" keep="true"	type="container" align="center" alpha="0" capture="true"  handcursor="false" maskchildren="true" zorder="6"
+			  bgborder="1 0xFFFFFF 1"  bgcolor="0x555555" bgalpha="0.7" bgshadow="0 10 20 0x000000 0.5" bgcapture="true" 
+			  onloaded="add_html_code(get(datacontent),true);"
+		/>
+	
+	<action name="openFrame" scope="private:POPUP" args="type, content, width, height, scrollbars"><![CDATA[
+		if(popup, break(); );
+		
+		addlayer('popup_bg', popup_bg);
+		set(popup_bg, type=container, align=lefttop, width=100%, height=100%, zorder=99, handcursor=false, bgcapture=true, capture=false,
+			bgcolor=0x000000, onloaded='tween(bgalpha,0.3,1.0);', ondown='popup_close()'
+		);
+					
+		addlayer('popup', popup);
+		set(popup, type=container, parent='popup_bg', width=calc(min(width,global.stagewidth*0.9)), height=calc(min(height,global.stageheight*0.8)), align=center,
+			bgborder='1 0x555555 1', bgcolor=0x555555, bgalpha=0.7, bgshadow='0 10 20 0x000000 0.5', bgcapture=true, maskchildren=false, capture=true, handcursor=false, alpha=0
+		);		
+		
+		// optional: add a close button
+		addlayer('popup_close_x', closex);
+		set(closex,
+			url='%CURRENTXML%/add_hotspot/plugins_l/picture/close.png',
+			parent='popup', align=righttop, edge=center, scale=0.5, zorder=99, alpha=0.25, onover='tween(alpha,1)', onout='tween(alpha,0.25)', ondown='tween(alpha,1)', onup='tween(alpha,0.25)', onclick='popup_close()', x=-15, y=-15
+		);		
+
+		if(type == 'html',
+			set(popup.type, html);
+			copy(popup.html, content);
+			copy(popup.htmlscrollbars, scrollbars);
+
+		  ,type == 'iframe',
+			set(popup.type, iframe);
+			copy(popup.iframeurl, content);
+
+		  ,type == 'image',
+		 	set(popup,
+		 		bgcolor=0xFFFFFF,
+		 		bgalpha=1,
+		 	);
+			addlayer("popup_image", img);
+			set(img,
+				url=get(content),
+				align=center,
+				width=-20, height=-20,
+				parent=get(popup.name),
+				onloaded='popup_imageloaded()'
+			);
+		);
+
+		tween(global.plugin[pp_blur].range, 40.0);
+		delayedcall(0.2, tween(global.layer[popup].alpha, 1.0); );
+
+		// events when the popup should get closed automatically
+		set(global.events[popup].onremovepano, popup_close() );
+		set(global.events[popup].onresize, popup_close() );
+	]]></action>
+	
+	
+	<action name="popup_close">
+		set(global.plugin[popup_bg].enabled, false);
+		set(global.events[popup].name, null);
+		tween(global.plugin[pp_blur].range, 0.0);
+		tween(global.layer[popup_bg].bgalpha, 0.0, 0.25);
+		tween(global.layer[popup].alpha, 0.0, 0.25, default,
+			removelayer('popup_bg', true);
+			scope(private:POPUP, delete(popup); );
+		);
+	</action>
+
+
+	<action name="popup_imageloaded" scope="private:POPUP">
+		calc(imgw, caller.imagewidth + 20);
+		calc(imgh, caller.imageheight + 20);
+		calc(maxw, global.stagewidth*0.9);
+		calc(maxh, global.stageheight*0.8);
+		if(imgw GT maxw,
+			calc(imgh, round(imgh * maxw / imgw));
+			copy(imgw, maxw);
+		);
+		if(imgh GT maxh,
+			calc(imgw, round(imgw * maxh / imgh));
+			copy(imgh, maxh);
+		);
+
+		set(global.layer[get(caller.parent)], width=get(imgw), height=get(imgh) );
+	</action>	
+	
+	
+	
+	
+	
+	
+	<action name="dollhouse_on_adhs">
+		tween(view.oz, 1500);
+		set(control.invert,false);
+	</action>
+	
+	
+	
+	<action name="dollhouse_off_adhs">
+		tween(view.oz, 0.0);
+		set(control.invert,false);
+	</action>
+
+	<!-- Показать текст при наведении  -->
+    <action name="showtit">
+				trace ("------------------------");
+			 showtext(get(hotspot[get(name)].title), STYLE1_LinkSM));
+	</action>	
+	
+
+ 
+	
+</krpano>

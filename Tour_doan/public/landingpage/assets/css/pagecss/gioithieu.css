@@ -1,0 +1,334 @@
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+}
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
+}
+
+
+/* Giới thiệu */
+.item_menu_introduce{
+    border-bottom: 1px solid rgb(126, 118, 118);
+    margin:1rem 0rem;
+    padding:0rem 0rem 0.5rem;
+}
+.link_menu_introduce{
+    font-size: 14px;
+    color:#000;
+}
+.title_menu_introduce{
+    width: 30%;
+    padding:0rem 2rem;
+}
+.image_introduce{
+    width: 100%;
+}
+.content_page_introduce{
+    width: 70%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding:1.5rem
+}
+.text_content_introduce{
+    margin-top:1.5rem;
+}
+.page_introduce{
+    padding: 2rem 0rem 3rem;
+}
+
+/* ds cán bộ */
+.menu_search_cadres{
+    display: flex;
+}
+.search_all{
+    padding:0rem 1rem;
+    display: flex;
+}
+.input_name{
+  
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.icon_search{
+    padding: 0.4rem 1rem;
+    background: blue;
+    margin-left: 1rem;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.list_cadres{
+    margin-top:2rem;
+   
+}
+
+.item_cadres{
+    width: 20%;
+    padding:2rem 1rem;
+}
+.content_item_cadres{
+    padding: 1rem;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+.img_cadres{
+    width: 100%;
+}
+.name_cadres{
+    padding-top:1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+font-size: 14px;
+}
+
+/* tin tức sự kiện  */
+.page_new{
+    padding:3rem 0rem;
+}
+.menu_page_left{
+    width: 30%;
+    padding:0rem 1.5rem;
+}
+.content_page_right{
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding:1rem;
+}
+.title_menu_page{
+    text-transform: uppercase;
+}
+.title_item_left{
+    padding-top:1rem;
+}
+.item_menu_left{
+    list-style-type: circle;
+    border-bottom: 1px solid rgba(161, 155, 155, 0.733);
+    padding:0.5rem ;
+}
+.link_menu_left{
+    font-size: 14px;
+    color:#000;
+}
+.list_new_left{
+    width: 60%;
+}
+.item_new_left{
+    width: 45%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding:1rem;
+    margin-right: 1.5rem;
+    margin-top:2rem;
+    
+}
+.list_content_right{
+    margin-top:2rem;
+}
+.list_new_right{
+    width: 40%;
+}
+.title_new{
+    margin-top:1rem;
+}
+.text_new{
+    margin-top:1rem;
+}
+/* tin noi bat */
+.title_noibat{
+    text-align: center;
+    text-transform: uppercase;
+}
+.item_new_right{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding:0.5rem 1rem;
+    margin-top:1.5rem;
+}
+.image_new_right{
+    width: 30%;
+}
+.text_new_right{
+    width: 70%;
+    padding:0rem 0rem 0rem 1rem;
+    display: block;
+}
+.date_new_noibat{
+    color:red;
+    display: block;
+}
+.text_new_right a{
+    color:#000;
+}
+
+/* page bieu mau */
+.page_bieumau{
+    padding:2rem 0rem;
+}
+.text_bieumau span{
+   padding:0.5rem;
+   background-color: red;
+    color:#fff;
+    text-transform: uppercase;
+}
+.page_bieumau h5{
+    margin-top:1.5rem;
+    text-transform: uppercase;
+}
+.table{
+    margin-top:1rem;
+}
+.img_nghiencuu{
+    padding:2rem 0rem;
+}
+/* thực tập doanh nghiệp */
+.list_question_thuctap{
+    padding: 1.5rem 2rem;
+}
+.item_question span{
+    cursor: pointer;
+   
+}
+.link_question.active{
+    color:rgb(14, 26, 196);
+}
+.sub_question{
+    display: none;
+    padding-left:2rem;
+    margin-top:1rem;
+}
+.icon_down{
+    
+}
+/* cuju sinh viên */
+.content_item_alumni_sv{
+    position: relative;
+}
+.blog_alumni_sv{
+    position: absolute;
+    bottom:0;
+    left:0;
+    background-color: red;
+    padding:0.2rem 0.5rem;
+
+}
+.blog_alumni_sv span{
+    color:#fff;
+    font-size: 12px;
+}
+.item_alumni_sv{
+    width: 29%;
+    padding:1rem;
+    margin:1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.link_alumni_sv{
+    color:#000;
+   
+}
+.link_alumni_sv h6{
+    margin-top:1rem;
+}
+
+.tabcontent {
+    display: none;
+  }
+  .tabcontent.active {
+    display: block;
+  }
+
+  /* khoa */
+  .list_nav_sub{
+    display: none;
+  }
+  .addclass_menusub{
+    display: block;
+  }
+
+  /* item tin tức */
+  .page_item_news{
+      margin-top:2rem;
+  }
+  .content_item_news{
+      width: 65%;
+  }
+  .categori_item_news{
+      width: 35%;
+      padding-left:2rem;
+  }
+  .categori_list{
+    padding: 1rem 2rem;
+    border:1px solid rgb(133, 121, 121);
+  }
+  .link_news {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding-top: 1rem;
+}
+.number_news {
+    float: right;
+}
+
+
+
+.featured_news_list{
+    margin-top:2rem;
+}
+.related_news{
+    padding-left:0px;
+}
+.col_related_news{
+    border: 1px solid rgba(156, 146, 146, 0.425);
+    padding:1rem;
+    margin-top:1rem;
+}
+.news_is{
+    width: 30%;
+    overflow: hidden;
+}
+.news_is:hover .img_featured{
+    transform: scale(1.2);
+    transition: 0.5s;
+    overflow: auto;
+}
+.text_news{
+    width: 70%;
+    padding-left: 1rem;
+}
+.title_featured_item_news{
+    font-size: 16px;
+}
+.read_view{
+    float: right;
+    background: blue;
+    color: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    font-size: 13px;
+}
+.read_view:hover{
+    background-color: rgba(212, 107, 20, 0.699);
+    color:#fff;
+}

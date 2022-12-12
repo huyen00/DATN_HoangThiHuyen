@@ -1,0 +1,190 @@
+/**
+ * English translate
+ * @type Object
+ */
+const vi = {
+    btn: {
+        about: 'Về',
+        back: 'Sau',
+        cancel: 'Hủy',
+        clear: 'Dọn dẹp',
+        copy: 'Sao chép',
+        cut: 'Cắt',
+        delete: 'Xóa',
+        edit: 'Chỉnh sửa',
+        forward: 'Trước',
+        folder: 'Tạo mới Thư Mục',
+        file: 'Tạo mới File',
+        fullScreen: 'Toàn màn hình',
+        grid: 'Lưới',
+        paste: 'Dán',
+        refresh: 'Làm mới',
+        submit: 'Gửi',
+        table: 'bảng',
+        upload: 'Tải lên',
+        uploadSelect: 'Chọn Files',
+        hidden: 'Ẩn File',
+    },
+    clipboard: {
+        actionType: 'Loại',
+        copy: 'Sao chép',
+        cut: 'Cắt',
+        none: 'Không có gì được chọn ',
+        title: 'Bảng tạm',
+    },
+    contextMenu: {
+        copy: 'Sao chép',
+        cut: 'Cắt',
+        delete: 'Xóa',
+        download: 'Tải xuống',
+        info: 'Đã được chọn:',
+        open: 'Mở',
+        paste: 'Dán',
+        properties: 'Đặc tính',
+        rename: 'Đổi tên',
+        select: 'Chọn',
+        view: 'Xem',
+        zip: 'Nén',
+        unzip: 'Giải nén',
+        edit: 'Xóa',
+        audioPlay: 'Chơi',
+        videoPlay: 'Chơi',
+    },
+    info: {
+        directories: 'Thư mục:',
+        files: 'Các tập tin:',
+        selected: 'Đã chọn: ',
+        selectedSize: 'Kích thước tệp đã chọn:',
+        size: 'Kích thước tệp:',
+    },
+    manager: {
+        table: {
+            date: 'Ngày tháng',
+            folder: 'Thư mục',
+            name: 'Tên',
+            size: 'Kích thước',
+            type: 'Loại',
+        },
+    },
+    modal: {
+        about: {
+            developer: 'Developer',
+            name: 'Laravel File Manager',
+            title: 'About',
+            version: 'Version',
+        },
+        delete: {
+            noSelected: 'Không có gì được chọn!',
+            title: 'Xóa',
+        },
+        newFile: {
+            fieldName: 'Tên tệp ',
+            fieldFeedback: 'Tập tin tồn tại!',
+            title: 'Tạo tệp mới ',
+        },
+        newFolder: {
+            fieldName: 'Folder name',
+            fieldFeedback: 'Folder exists!',
+            title: 'Create new folder',
+        },
+        preview: {
+            title: 'Preview',
+        },
+        properties: {
+            disk: 'Disk',
+            modified: 'Modified',
+            name: 'Name',
+            path: 'Path',
+            size: 'Size',
+            title: 'Properties',
+            type: 'Type',
+            url: 'URL',
+            access: 'Access',
+            access_0: 'Access denied',
+            access_1: 'Only Read',
+            access_2: 'Read and Write',
+        },
+        rename: {
+            directoryExist: 'Directory exists',
+            fieldName: 'Enter new name',
+            fieldFeedback: 'Invalid name',
+            fileExist: 'File exists',
+            title: 'Rename',
+        },
+        status: {
+            noErrors: 'No errors!',
+            title: 'Status',
+        },
+        upload: {
+            ifExist: 'If file exist:',
+            noSelected: 'No files selected!',
+            overwrite: 'Overwrite!',
+            selected: 'Selected:',
+            size: 'Size:',
+            skip: 'Skip',
+            title: 'Upload files',
+        },
+        editor: {
+            title: 'Editor',
+        },
+        audioPlayer: {
+            title: 'Audio player',
+        },
+        videoPlayer: {
+            title: 'Video player',
+        },
+        zip: {
+            title: 'Create archive',
+            fieldName: 'Archive name',
+            fieldFeedback: 'Archive exists!',
+        },
+        unzip: {
+            title: 'Unpack archive',
+            fieldName: 'Folder name',
+            fieldRadioName: 'Extract to:',
+            fieldRadio1: 'To current folder',
+            fieldRadio2: 'In a new folder',
+            fieldFeedback: 'Folder exists!',
+            warning: 'Attention! If the names match, the files will be overwritten!',
+        },
+        cropper: {
+            title: 'Cropping',
+            apply: 'Apply',
+            reset: 'Reset',
+            save: 'Save',
+        },
+    },
+    notifications: {
+        cutToClipboard: 'Cut to clipboard!',
+        copyToClipboard: 'Copied to clipboard!',
+    },
+    response: {
+        noConfig: 'Config not found!',
+        notFound: 'Not found!',
+        diskNotFound: 'Disk not found!',
+        pathNotFound: 'Path not found!',
+        diskSelected: 'Disk selected!',
+        // files
+        fileExist: 'File already exists!',
+        fileCreated: 'File created!',
+        fileUpdated: 'File updated!',
+        fileNotFound: 'File not found!',
+        // directories
+        dirExist: 'Directory already exists!',
+        dirCreated: 'Directory created!',
+        dirNotFound: 'Directory not found',
+        // actions
+        uploaded: 'All files uploaded!',
+        notAllUploaded: "Some files weren't uploaded!",
+        delNotFound: "Some items weren't founded!",
+        deleted: 'Deleted!',
+        renamed: 'Renamed!',
+        copied: 'Copied successfully!',
+        // zip
+        zipError: 'Error creating archive!',
+        // acl
+        aclError: 'Access denied!',
+    },
+};
+
+export default vi;
